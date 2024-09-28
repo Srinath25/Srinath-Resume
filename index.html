@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body.light-mode {
+    background-image: url('https://img.freepik.com/free-vector/white-elegant-texture-wallpaper_23-2148417584.jpg?w=996&t=st=1727531496~exp=1727532096~hmac=ebc173889c051ca5ce139a9a0d3a0a35cbecaff0870772516c074c7d98ef8f9f');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #920483;
+}
+body.dark-mode {
+    background-image: url('https://img.freepik.com/free-vector/seamless-gold-rhombus-grid-pattern-black-background_53876-97589.jpg?w=1060&t=st=1727531557~exp=1727532157~hmac=b5eeb61eef4d92662e0d2a75e86279511b71795783174c48630db3d70da59625');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #38e40d;
+    transition: background-color 0.5s, color 0.5s;
+}
+.home-page-content {
+    text-align: center;
+    padding: 200px;
+    font-size: 30px;
+}
+nav {
+    height: 70px;
+    background: #920483;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    padding-left: 110px;
+}
+nav ol {
+    margin-right: 30px;
+}
+nav ol li {
+    display: inline-block;
+    position: relative;
+}
+nav ol li a {
+    color: white;
+    display: block;
+    padding: 0 15px;
+    line-height: 70px;
+    transition: color 0.3s ease;
+}
+nav ol li a:hover {
+    color: #ffcc00; 
+}
+
+/* Dropdown CSS */
+nav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #920483;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+nav .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+nav .dropdown-content a:hover {
+    background-color: #a2ff00;
+    color: black;
+}
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.toggle-btn {
+    margin-right: 20px;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.toggle-btn:hover {
+    background-color: #ffb800;
+}
+</style>
+</head>
+<body class="light-mode">
+    <nav>
+        <label class="logo">Srinath Ravi</label>
+        <ol>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Experience</a></li>
+            <li><a href="#">About</a></li>
+            <!-- Dropdown button -->
+            <li class="dropdown">
+                <a href="#">More</a>
+                <div class="dropdown-content">
+                    <a href="https://www.linkedin.com/in/srinath-ravi-72a2a41a3/">Linked-In</a>
+                    <a href="https://github.com/Srinath25">Git-Hub</a>
+                    <a href="https://www.credly.com/badges/77bf133e-f864-4ff5-a5c5-b90763aaba37/public_url">Certificate</a>
+                </div>
+            </li>
+        </ol>
+        <button class="toggle-btn" onclick="toggleTheme()">Theme</button>
+    </nav>
+    <div class="home-page-content">
+        <h2>Happy-Worker | Trustworthy | Knowledge-Seeker</h2>
+        <h3>"Welcome! I'm excited to share my journey with you."</h3>
+        <h4>Explore my projects, discover my skills, and lets connect to create something extraordinary together!</h4>
+    </div>
+
+    <script>
+    function toggleTheme() {
+        var body = document.body;
+        body.classList.toggle("dark-mode");
+        body.classList.toggle("light-mode");
+    }
+    </script>
+</body>
+</html>
